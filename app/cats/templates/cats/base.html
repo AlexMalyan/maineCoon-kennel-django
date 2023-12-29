@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href='{% static "cats/css/style.min.css" %}'>
+
+  <script defer src='{% static "cats/js/main.min.js" %}'></script>
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% block header %}
+
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__nav">
+        <nav>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">Главная</li>
+            <li class="header__nav-item">О нас</li>
+            <li class="header__nav-item header__nav-item--active">коты</li>
+            <li class="header__nav-item"><a href="catwoman.html"> кошки</a></li>
+            <li class="header__nav-item">Контакты</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__logo">
+        <div class="header__logo-heading">ШатоДеКун</div>
+        <span class="header__logo-subtitle">питомник мейн-кунов</span>
+      </div>
+  
+      <div class="header__subtitle">
+        НАЙДИТЕ СВОЕГО ЛУЧШЕГО ДРУГА!
+      </div>
+    </div>
+  </header>
+    
+  {% endblock header %}
+
+  <main>
+{% block content %}
+  
+{% endblock content %}
+  </main> 
+   <footer class="footer">
+    <div class="footer__wrapper container">
+      <div class="footer__logo">
+
+        ШатоДеКун
+
+      </div> 
+
+      <div class="footer__contacts">
+
+        <address class="footer__adress">
+
+          <div class="footer__adress-text">
+
+            USA – Chicago,
+
+            <br>901 Easte E Street,
+
+            <br>Wilmington, CA 90744
+
+            <br>e-mail: <a href="mailto:mail@demolink.org">mail@demolink.org</a>
+
+          </div>
+
+          <div class="footer__adress-phone">(800) <span>123 1234</span>
+
+          </div>
+
+        </address>
+
+      </div>
+
+      <div class="footer__policy">
+
+        <div class="footer__policy-privacy">© <span id="copyright-year">2023</span> | <a href="index-5.html">Privacy
+
+            Policy</a></div>
+
+      </div>
+
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

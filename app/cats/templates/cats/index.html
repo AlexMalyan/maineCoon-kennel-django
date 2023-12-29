@@ -1,0 +1,123 @@
+{% extends "cats/base.html" %}
+
+<!-- menu = [
+    "О сайте",
+    "Добавить статью",
+    "Обратная связь",
+    "Войти",
+] -->
+
+{% block content %}
+<ul>
+  {% for i in menu %}
+  <li>
+    {{i}}
+  </li>
+
+  {% endfor %}
+</ul>
+
+
+
+
+
+
+<ul>
+  {% for c in cats %}
+  <li>
+    <h2>{{ c.name }}</h2>
+    <p>{{ c.description }}</p>
+  </li>
+  <hr>
+
+  {% endfor %}
+</ul>
+<section class="container border-bottom">
+  <div class="catman__wrapper">
+    <h2 class="catman__head text-head">
+      Коты
+      <span class="catman__head-subheading text">мейн-куны для вязок </span>
+    </h2>
+    <!-- Карточки котов -->
+    <div class="catman__card">
+      <div class="catman__card-img">
+        <img class="catman__card-img-img" src="images/elizar-1.jpg" alt="">
+      </div>
+      <div class="catman__card-content ">
+        <h5 class="catman__card-title text"> КОТ - Int.Ch. ELIZAR MOSWILDCOON*RU (ES 22) </h5>
+        <p class="catman__card-text">
+          МЕЖДУНАРОДНЫЙ ЧЕМПИОН МФА HCM-N/N
+          Очень крупный кот. Вес 13,5 кг (не жира)
+          МЕЖДУНАРОДНЫЙ ЧЕМПИОН МФА
+          Мейн-кун ( MCO)
+          Кремовый серебристый мраморный (es 22)
+          Дата рождения –01.09.2013 года.
+          HCM-N/N
+          ОТКРЫТ ДЛЯ ВЯЗОК
+        </p>
+        <button type="button" class="btn">записаться ></button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container border-bottom">
+  <div class="features features__wrapper">
+    <h4 class="features__head features__head--span text-head">Популярные коты
+      <span class="features__head-subheading text"> ЭЛИТА ПРОЖИВЕТ НЕМНОГО ДОЛЬШЕ</span>
+    </h4>
+    <div class="features__card">
+      <div class="features__card-img">
+        <img src="images/kitten_solomon.webp" alt="">
+      </div>
+      <div class="features__card-title text">
+        Соломон - котик д/р 23.07.2022. (г.Липецк)
+      </div>
+      <p class="features__card-text">
+        Папа котика наш основной кот Int. Ch. Elizar Moswildcoon, мама Выпускница питомника Юми ШатоДеКун. Котик
+        очень ласковый и пушистый. Привит 1 вакциной, обработан от глистов.
+      </p>
+      <button class="btn features__card-btn" type="button">
+        READ MORE >
+      </button>
+    </div>
+    <div class="features__card">
+      <div class="features__card-img">
+        <picture>
+          <source srcSet="images/elizar.avif" type="image/avif" />
+          <source srcSet="images/elizar.webp" type="image/webp" />
+          <img decoding="async" loading="lazy" src="images/elizar.jpg" alt="an avif image" />
+        </picture>
+
+
+      </div>
+      <div class="features__card-title text">
+        ARCU ODIO, PENTES AVIF
+      </div>
+      <p class="features__card-text">
+        Vivamsan tempor purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+        himenaeos. Donec placerat a mauris et facilisis.
+        Vivamsan tempor purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+        himenaeos. Donec placerat a mauris et facilisis.
+      </p>
+      <button class="btn features__card-btn" type="button">
+        READ MORE >
+      </button>
+    </div>
+    <div class="features__card">
+      <div class="features__card-img">
+        <img src="images/elizar.jpg" alt="">
+      </div>
+      <div class="features__card-title text">
+        ARCU ODIO, PENTES
+      </div>
+      <p class="features__card-text">
+        Vivamsan tempor purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+        himenaeos. Donec placerat a mauris et facilisis.
+      </p>
+      <button class="btn features__card-btn " type="button">
+        READ MORE >
+      </button>
+    </div>
+  </div>
+</section>
+{% endblock content %}
